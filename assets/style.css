@@ -1,0 +1,28 @@
+#last-li {
+  /* selettore con id: MOLTO SPECIFICO */
+  color: red;
+  font-size: 1.35em; /* 35% più grande */
+  /* Oswald è il nome del font che ho importato da Google Font, 
+  va assegnato agli elementi desiderati */
+  font-family: 'Oswald', Arial, sans-serif;
+  /* font-weight: 700; */
+}
+
+body {
+  /* se lo volessi applicare a tutto il documento... */
+  /* font-family: 'Oswald', Arial, sans-serif; */
+}
+
+.stefano {
+}
+
+p {
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  /* selezionerebbe TUTTE le immagini... */
+}
