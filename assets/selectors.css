@@ -1,0 +1,72 @@
+/* voglio applicare un bordo rosso all'immagine del gatto */
+/* 1) devo trovare un selettore adatto per selezionare SOLAMENTE l'immagine del gatto */
+/* 2) devo trovare la regola per applicare un bordo rosso */
+
+img {
+  /* non va bene! andrebbe a prendere ENTRAMBE le immagini */
+}
+
+#cat {
+  /* va a cercare nel documento un elemento con id="cat" */
+  border: 3px solid red;
+}
+
+.special {
+  /* va a cercare nel documento TUTTI gli elementi con class="special" */
+  color: orange;
+  font-size: 1.25em;
+}
+
+/* ipotizziamo inoltre che io voglia dare un bordino arancione a gli elementi
+dotati di class="special" che sono dentro una lista */
+
+/* vado a selezionare gli elementi di classe "special" CHE SONO ANCHE <li> */
+
+li.special {
+  /* va a prendere gli <li> che hanno class="special" */
+  border: 2px solid red;
+}
+
+/* per selezionare solo la prima lista, potrei sfruttare il fatto
+che è FIGLIA di una <section> (mentre la seconda no) */
+
+section ul {
+  /* questo è un selettore di DISCENDENZA */
+  /* va a prendere SOLO le <ul> che sono DENTRO le <section> */
+  /* la rendiamo invisibile */
+  visibility: hidden; /* la rende "trasparente */
+}
+
+footer ul {
+  /* funzionerebbe! */
+}
+
+footer > ul {
+  /* NON funzionerebbe, perchè la ul non è FIGLIA DIRETTA del footer (ma è dentro un div) */
+  visibility: hidden; /* la rende "trasparente */
+}
+
+footer > div > ul {
+  /* questo funzionerebbe */
+}
+
+ul:last-of-type > li:first-of-type {
+  /* il primo <li> della terza lista non ordinata */
+  font-size: 0.75em;
+}
+
+ul:nth-of-type(1) {
+  /* la PRIMA ul */
+}
+
+ul:nth-of-type(2) {
+  /* la SECONDA ul */
+}
+
+ul:nth-of-type(odd) {
+  /* tutte le liste con numero DISPARI */
+}
+
+ul:nth-of-type(even) {
+  /* tutte le liste con numero PARI */
+}
